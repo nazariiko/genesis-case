@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styled from 'styled-components';
+import GlobalStyle from './styles/global';
+
+import Header from './components/Header';
+import Welcome from './sections/Welcome';
+import GetSmarter from './sections/GetSmarter';
+import UseSummaries from './sections/UseSummaries';
+import ReadOrListen from './sections/ReadOrListen';
+
+const Container = styled.div`
+  width: 80%;
+  max-width: 1080px;
+  padding: 0 20px;
+  margin: 0 auto;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <GlobalStyle />
+      <Header />
+      <Welcome />
+      <GetSmarter />
+      <UseSummaries />
+      <ReadOrListen />
+    </Container>
   );
 }
 
