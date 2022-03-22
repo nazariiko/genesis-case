@@ -12,6 +12,12 @@ const Container = styled.div`
   padding: 25px 25px 0 25px;
   margin-bottom: 70px;
 
+  @media (max-width: 660px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 10px;
+  }
+
   h2 {
     margin-bottom: 10px;
   }
@@ -22,8 +28,8 @@ function ReadOrListen() {
     <Container>
       <h2>Read or Listen</h2>
       <p>
-        Commuting, jogging, or stuck in line? Enjoy the best books in a condensed format.
-        Summaries have an audio version, narrated by professional voice actors.
+        Commuting, jogging, or stuck in line? Enjoy the best books in a condensed format. Summaries
+        have an audio version, narrated by professional voice actors.
       </p>
       <ToggleImage />
     </Container>

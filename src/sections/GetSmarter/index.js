@@ -9,12 +9,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #E6F2E7;
+  background: #e6f2e7;
   border: 1px solid rgba(0, 187, 119, 0.4);
   border-radius: 12px;
   padding: 25px;
   margin-bottom: 70px;
 
+  @media (max-width: 660px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 10px;
+  }
 
   h2 {
     margin-bottom: 25px;
@@ -27,16 +32,22 @@ const Container = styled.div`
   .reviewers-image {
     height: 230px;
     margin-bottom: 10px;
+
+    @media (max-width: 660px) {
+      height: 170px;
+    }
   }
 
   .insights-image {
     margin-top: 30px;
     margin-bottom: 10px;
+    height: 180px;
   }
 
   .builtHabit-image {
     margin-top: 30px;
     margin-bottom: 10px;
+    height: 180px;
   }
 `;
 
@@ -53,8 +64,8 @@ function GetSmarter() {
       <img className="builtHabit-image" src={builtHabit} alt="builtHabit" />
       <h3>Build a reading habit</h3>
       <p>
-        Consistency is the key to top performance.
-        Only 15 minutes per day to make reading your brand new habit!
+        Consistency is the key to top performance. Only 15 minutes per day to make reading your
+        brand new habit!
       </p>
     </Container>
   );

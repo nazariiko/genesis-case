@@ -6,7 +6,7 @@ import Button from '../../components/Button';
 import discover from '../../assets/img/discover.jpg';
 
 const Container = styled.div`
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   height: 75vh;
@@ -14,6 +14,20 @@ const Container = styled.div`
   padding: 25px 100px;
   margin-bottom: 70px;
   position: relative;
+
+  @media (max-width: 1100px) {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  @media (max-width: 660px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 10px;
+  }
 
   h2 {
     margin-bottom: 8px;
@@ -23,10 +37,27 @@ const Container = styled.div`
     margin-bottom: 50px;
   }
 
-  img {
+  & > button {
+    @media (max-width: 660px) {
+      display: none;
+    }
+  }
+
+  & > img {
     position: absolute;
     bottom: 0;
     right: 50px;
+
+    @media (max-width: 1100px) {
+      margin-top: 24px;
+      position: relative;
+      right: 0;
+      height: 304px;
+    }
+
+    @media (max-width: 660px) {
+      height: 280px;
+    }
   }
 `;
 

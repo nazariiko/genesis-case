@@ -18,7 +18,6 @@ const GlobalStyle = createGlobalStyle`
     line-height: 150%;
     text-align: center;
     color: #000000;
-    height: 4000px;
   }
 
   button {

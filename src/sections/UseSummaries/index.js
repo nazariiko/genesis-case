@@ -10,11 +10,17 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #FFEDE1;
+  background: #ffede1;
   border: 1px solid rgba(255, 136, 51, 0.2);
   border-radius: 12px;
   padding: 25px;
   margin-bottom: 70px;
+
+  @media (max-width: 660px) {
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-bottom: 10px;
+  }
 
   h2 {
     margin-bottom: 10px;
@@ -27,14 +33,17 @@ const Container = styled.div`
   .book-image {
     margin-top: 25px;
     margin-bottom: 10px;
+    height: 168px;
   }
 
   .iphoneBook-image {
     margin-bottom: 10px;
+    height: 168px;
   }
 
   .divider {
     margin: 10px 0;
+    height: 78px;
   }
 `;
 
@@ -43,8 +52,8 @@ function UseSummaries() {
     <Container>
       <h2>Summary is the new black</h2>
       <p>
-        Use summaries: comprehensive 15-min abstracts from nonfiction books
-        with the main concepts and recommendations.
+        Use summaries: comprehensive 15-min abstracts from nonfiction books with the main concepts
+        and recommendations.
       </p>
       <img className="book-image" src={book} alt="book" />
       <p>Typical book</p>
