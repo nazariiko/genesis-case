@@ -5,7 +5,7 @@ import Button from '.';
 const FixedButtonContainer = styled.div`
   display: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 20px;
   width: calc(100% - 20px);
   justify-content: center;
 

@@ -7,7 +7,7 @@ import twitter from '../../assets/svg/twitter.svg';
 import instagram from '../../assets/svg/instagram1.svg';
 
 const Container = styled.div`
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 20px;
@@ -15,6 +15,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media (max-width: 660px) {
+    margin-bottom: 90px;
+  }
 
   & > h2 {
     margin: 20px 0;
