@@ -71,7 +71,6 @@ function CategoriesAndBooks() {
   };
 
   const handleAddActiveCategory = React.useCallback((category) => {
-    console.log(activeCategories);
     setActiveCategories((items) => [...items, category]);
   }, []);
 
