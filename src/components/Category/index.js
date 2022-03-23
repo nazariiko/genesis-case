@@ -44,4 +44,4 @@ function Category({ name, iconUrl, handleAddActiveCategory, handleRemoveActiveCa
   );
 }
 
-export default Category;
+export default React.memo(Category);

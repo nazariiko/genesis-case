@@ -70,13 +70,14 @@ function CategoriesAndBooks() {
     scrollRow3.current.scrollLeft = pageY / 10;
   };
 
-  const handleAddActiveCategory = (category) => {
-    setActiveCategories([...activeCategories, category]);
-  };
+  const handleAddActiveCategory = React.useCallback((category) => {
+    console.log(activeCategories);
+    setActiveCategories((items) => [...items, category]);
+  }, []);
 
-  const handleRemoveActiveCategory = (category) => {
-    setActiveCategories(activeCategories.filter((activeCategory) => activeCategory !== category));
-  };
+  const handleRemoveActiveCategory = React.useCallback((category) => {
+    setActiveCategories((items) => items.filter((item) => item !== category));
+  }, []);
 
   const setAllCategories = () => {
     setActiveCategories([]);
